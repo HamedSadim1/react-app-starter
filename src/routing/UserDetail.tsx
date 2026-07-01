@@ -8,7 +8,7 @@ const UserDetail = () => {
   return (
     <div className="card animate-fade-in space-y-6">
       <div className="flex items-center gap-4">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 text-2xl font-bold text-white shadow-lg">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary-400 to-primary-600 text-2xl font-bold text-white shadow-lg">
           {params.id}
         </div>
         <div>

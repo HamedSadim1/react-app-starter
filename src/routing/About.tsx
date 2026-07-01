@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="animate-fade-in mx-auto max-w-2xl space-y-8">
       <section className="card space-y-4">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 text-2xl shadow-lg">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-primary-400 to-primary-600 text-2xl shadow-lg">
           ℹ️
         </div>
         <h1 className="text-center text-2xl font-extrabold text-surface-900 dark:text-surface-100">

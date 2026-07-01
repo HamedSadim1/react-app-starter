@@ -30,7 +30,7 @@ const HomePage = () => {
 
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-in">
-        <div className="card bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 border-primary-200 dark:border-primary-800/50">
+        <div className="card bg-linear-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 border-primary-200 dark:border-primary-800/50">
           <h3 className="text-xs font-bold text-primary-700 dark:text-primary-300 uppercase tracking-wider">
             Active Modules
           </h3>
@@ -38,7 +38,7 @@ const HomePage = () => {
             2
           </p>
         </div>
-        <div className="card !border-success/20 bg-gradient-to-br from-success/10 to-success/5">
+        <div className="card border-success/20! bg-linear-to-br from-success/10 to-success/5">
           <h3 className="text-xs font-bold text-success uppercase tracking-wider">
             Session Status
           </h3>
@@ -49,7 +49,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className="card !border-warning/20 bg-gradient-to-br from-warning/10 to-warning/5">
+        <div className="card border-warning/20! bg-linear-to-br from-warning/10 to-warning/5">
           <h3 className="text-xs font-bold text-warning uppercase tracking-wider">
             Unread Alerts
           </h3>

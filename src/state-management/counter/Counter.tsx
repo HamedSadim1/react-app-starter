@@ -11,7 +11,7 @@ const Counter = () => {
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="card animate-scale-in flex flex-col items-center p-6 space-y-8 bg-gradient-to-b from-surface-50 to-white dark:from-surface-900 dark:to-surface-950">
+    <div className="card animate-scale-in flex flex-col items-center p-6 space-y-8 bg-linear-to-b from-surface-50 to-white dark:from-surface-900 dark:to-surface-950">
       {/* Header */}
       <div className="flex w-full items-center justify-between">
         <div>

@@ -7,7 +7,7 @@ const HomePage = () => {
       <section className="relative overflow-hidden pt-20 pb-16 text-center lg:pt-32 lg:pb-24">
         {/* Animated Background glass effect */}
         <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary-400 to-primary-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-primary-400 to-primary-600 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
         </div>
 
         <div className="mx-auto max-w-4xl px-4 space-y-8">
@@ -19,7 +19,7 @@ const HomePage = () => {
 
           <h1 className="text-5xl font-extrabold tracking-tight text-surface-900 dark:text-surface-50 sm:text-7xl">
             Build Faster With{" "}
-            <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
               React Mastery
             </span>
           </h1>
@@ -163,7 +163,7 @@ const HomePage = () => {
         className="mx-auto max-w-5xl px-4 animate-scale-in"
         style={{ animationDelay: "600ms" }}
       >
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-800 px-8 py-16 shadow-2xl sm:px-16 sm:py-20 text-center">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-linear-to-br from-primary-600 via-primary-700 to-indigo-800 px-8 py-16 shadow-2xl sm:px-16 sm:py-20 text-center">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
           <div className="relative z-10">
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
