@@ -15,7 +15,7 @@ const useCounter = create<CounterStore>((set) => ({
   reset: () => set(() => ({ max: 10 })),
 }));
 
-if (process.env.NODE_ENV === "development") {
+if (import.meta.env.DEV) {
   mountStoreDevtool("Counter", useCounter);
 }
 
