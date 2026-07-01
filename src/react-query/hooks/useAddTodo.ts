@@ -34,7 +34,7 @@ const useAddTodo = (onAdd: () => void) => {
       // },
       onAdd();
       queryClient.setQueryData<Todo[]>(CACHE_KEY_TODOS, (todos) =>
-        todos?.map((todo) => (todo === newTodo ? savedTodo : todo))
+        todos?.map((todo) => (todo === newTodo ? savedTodo : todo)),
       );
     },
     onError: (error, newTodo, context) => {

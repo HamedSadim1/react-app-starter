@@ -3,7 +3,7 @@ const UserDetail = () => {
   const params = useParams();
   console.log(params);
   // setSearchParams have sideEffect use it in useEffect
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const location = useLocation();
   console.log(location);
   console.log(searchParams.toString());

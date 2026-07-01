@@ -1,4 +1,3 @@
-import { useState } from "react";
 import usePost from "./hooks/usePost";
 import React from "react";
 
@@ -20,7 +19,7 @@ const PostList = () => {
   return (
     <>
       <ul className="list-group">
-        {posts.pages.map((page, index) => (
+        {posts?.pages.map((page, index) => (
           <React.Fragment key={index}>
             {page.map((post) => (
               <li key={post.id} className="list-group-item">
