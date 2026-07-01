@@ -5,6 +5,7 @@ interface CounterStore {
   counter: number;
   max: number;
   increment: () => void;
+  decrement: () => void;
   reset: () => void;
 }
 
@@ -13,8 +14,11 @@ const useCounter = create<CounterStore>()(
     (set) => ({
       counter: 0,
       max: 5,
-      increment: () => set((state) => ({ counter: state.counter + 1 })),
-      reset: () => set(() => ({ max: 10 })),
+      increment: () =>
+        set((state) => ({ counter: Math.min(state.counter + 1, state.max) })),
+      decrement: () =>
+        set((state) => ({ counter: Math.max(0, state.counter - 1) })),
+      reset: () => set(() => ({ counter: 0, max: 10 })),
     }),
     { name: "Counter" },
   ),
