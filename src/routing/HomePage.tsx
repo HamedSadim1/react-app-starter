@@ -163,22 +163,35 @@ const HomePage = () => {
         className="mx-auto max-w-5xl px-4 animate-scale-in"
         style={{ animationDelay: "600ms" }}
       >
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-primary-900 px-8 py-16 shadow-2xl sm:px-16 sm:py-20 text-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-900 mix-blend-multiply" />
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-800 px-8 py-16 shadow-2xl sm:px-16 sm:py-20 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
           <div className="relative z-10">
             <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Ready to dive in?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-primary-100">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-blue-100">
               Stop configuring things manually. Start building features right
               away and join hundreds of productive developers.
             </p>
             <div className="mt-10 flex justify-center gap-4">
               <Link
                 to="/users"
-                className="btn-primary bg-white text-primary-900 hover:bg-surface-50"
+                className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-primary-700 shadow-lg transition-all duration-200 hover:bg-blue-50 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary-600"
               >
                 Start Building Now
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
               </Link>
             </div>
           </div>
