@@ -1,5 +1,7 @@
 import usePost from "./hooks/usePost";
 import React from "react";
+import ErrorDisplay from "../components/ErrorDisplay";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const PostList = () => {
   const pageSize = 10;
@@ -15,13 +17,7 @@ const PostList = () => {
 
   if (error)
     return (
-      <div className="card animate-fade-in border-error/20 bg-error/5 text-center dark:border-error/20 dark:bg-error/10">
-        <div className="mb-2 text-4xl">⚠️</div>
-        <h3 className="text-error">Failed to load posts</h3>
-        <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          {error.message}
-        </p>
-      </div>
+      <ErrorDisplay title="Failed to load posts" message={error.message} />
     );
 
   return (
@@ -74,25 +70,7 @@ const PostList = () => {
         >
           {isFetchingNextPage ? (
             <>
-              <svg
-                className="h-4 w-4 animate-spin"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                />
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                />
-              </svg>
+              <LoadingSpinner />
               Loading more...
             </>
           ) : (

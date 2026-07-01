@@ -5,6 +5,7 @@ import {
   InfiniteData,
   QueryKey,
 } from "@tanstack/react-query";
+import { API_BASE_URL } from "../constants";
 
 interface Post {
   id: number;
@@ -28,7 +29,7 @@ const usePost = (query: PostQuery) => {
     queryKey: ["posts", query],
     queryFn: ({ pageParam }) =>
       axios
-        .get<Post[]>("https://jsonplaceholder.typicode.com/posts", {
+        .get<Post[]>(`${API_BASE_URL}/posts`, {
           params: {
             _start: (pageParam - 1) * query.pageSize,
             _limit: query.pageSize,

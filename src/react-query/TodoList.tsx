@@ -1,4 +1,5 @@
 import useTodos from "./hooks/useTodos";
+import ErrorDisplay from "../components/ErrorDisplay";
 
 const TodoList = () => {
   const { data, error, isLoading } = useTodos();
@@ -7,12 +8,7 @@ const TodoList = () => {
 
   if (error)
     return (
-      <div className="card animate-fade-in border-error/20 bg-error/5 text-center dark:border-error/20 dark:bg-error/10">
-        <h3 className="text-error">Failed to load todos</h3>
-        <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          {error.message}
-        </p>
-      </div>
+      <ErrorDisplay title="Failed to load todos" message={error.message} />
     );
 
   return (

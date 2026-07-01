@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { navLinkClass } from "../utils/linkClasses";
 
 const NavBar = () => {
   const [dark, setDark] = useState(() =>
@@ -17,13 +18,6 @@ const NavBar = () => {
       localStorage.setItem("theme", "light");
     }
   }, [dark]);
-
-  const linkClass = ({ isActive }: { isActive: boolean }) =>
-    `px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-      isActive
-        ? "bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300"
-        : "text-surface-600 hover:text-surface-900 hover:bg-surface-100 dark:text-surface-400 dark:hover:text-surface-100 dark:hover:bg-surface-800"
-    }`;
 
   return (
     <nav className="sticky top-0 z-50 border-b border-surface-200 bg-white/80 shadow-sm backdrop-blur-lg transition-colors duration-300 dark:border-surface-800 dark:bg-surface-900/80">
@@ -52,13 +46,13 @@ const NavBar = () => {
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-1 sm:flex">
-            <NavLink to="/" end className={linkClass}>
+            <NavLink to="/" end className={navLinkClass}>
               Home
             </NavLink>
-            <NavLink to="/users" className={linkClass}>
+            <NavLink to="/users" className={navLinkClass}>
               Users
             </NavLink>
-            <NavLink to="/contact" className={linkClass}>
+            <NavLink to="/contact" className={navLinkClass}>
               Contact
             </NavLink>
 
@@ -140,21 +134,21 @@ const NavBar = () => {
               to="/"
               end
               onClick={() => setMenuOpen(false)}
-              className={linkClass}
+              className={navLinkClass}
             >
               Home
             </NavLink>
             <NavLink
               to="/users"
               onClick={() => setMenuOpen(false)}
-              className={linkClass}
+              className={navLinkClass}
             >
               Users
             </NavLink>
             <NavLink
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className={linkClass}
+              className={navLinkClass}
             >
               Contact
             </NavLink>

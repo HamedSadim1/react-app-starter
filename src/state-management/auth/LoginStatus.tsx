@@ -1,4 +1,5 @@
 import useAuthStore from "./store";
+import { DEMO_USERNAME } from "../../react-query/constants";
 
 const LoginStatus = () => {
   const { login, user, logout } = useAuthStore();
@@ -21,7 +22,10 @@ const LoginStatus = () => {
       </div>
     );
   return (
-    <button onClick={() => login("Hamed")} className="btn-primary text-sm">
+    <button
+      onClick={() => login(DEMO_USERNAME)}
+      className="btn-primary text-sm"
+    >
       <svg
         className="h-4 w-4"
         fill="none"

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FormField from "../components/FormField";
 
 const LoginPage = () => {
   return (
@@ -17,22 +18,16 @@ const LoginPage = () => {
         </div>
 
         <form className="space-y-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium text-surface-700 dark:text-surface-300">
-              Email
-            </label>
+          <FormField label="Email">
             <input
               type="email"
               className="input"
               placeholder="you@example.com"
             />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-surface-700 dark:text-surface-300">
-              Password
-            </label>
+          </FormField>
+          <FormField label="Password">
             <input type="password" className="input" placeholder="••••••••" />
-          </div>
+          </FormField>
           <button type="submit" className="btn-primary w-full">
             Sign In
           </button>

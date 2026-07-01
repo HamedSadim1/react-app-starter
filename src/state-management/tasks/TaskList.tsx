@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import TasksContext from "./taskContext";
+import EmptyState from "../../components/EmptyState";
 
 const useTask = () => useContext(TasksContext);
 
@@ -62,12 +63,7 @@ const TaskList = () => {
 
       {/* Task list */}
       {tasks.length === 0 ? (
-        <div className="flex flex-col items-center gap-3 py-8 text-center">
-          <div className="text-4xl opacity-50">📋</div>
-          <p className="text-sm text-surface-400 dark:text-surface-500">
-            No tasks yet. Add one above!
-          </p>
-        </div>
+        <EmptyState icon="📋" message="No tasks yet. Add one above!" />
       ) : (
         <ul className="space-y-2">
           {tasks.map((task, i) => (

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import FormField from "../components/FormField";
 
 const ContactPage = () => {
   const navigate = useNavigate();
@@ -20,32 +21,23 @@ const ContactPage = () => {
           }}
           className="space-y-4"
         >
-          <div>
-            <label className="mb-1 block text-sm font-medium text-surface-700 dark:text-surface-300">
-              Name
-            </label>
+          <FormField label="Name">
             <input type="text" className="input" placeholder="Your name" />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-surface-700 dark:text-surface-300">
-              Email
-            </label>
+          </FormField>
+          <FormField label="Email">
             <input
               type="email"
               className="input"
               placeholder="you@example.com"
             />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-surface-700 dark:text-surface-300">
-              Message
-            </label>
+          </FormField>
+          <FormField label="Message">
             <textarea
               className="input min-h-[100px] resize-y"
               placeholder="Your message..."
               rows={4}
             />
-          </div>
+          </FormField>
           <button type="submit" className="btn-primary w-full">
             <svg
               className="h-4 w-4"
