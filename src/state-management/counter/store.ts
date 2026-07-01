@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { mountStoreDevtool } from "simple-zustand-devtools";
+import { devtools } from "zustand/middleware";
 
 interface CounterStore {
   counter: number;
@@ -8,15 +8,11 @@ interface CounterStore {
   reset: () => void;
 }
 
-const useCounter = create<CounterStore>((set) => ({
+const useCounter = create<CounterStore>()(devtools((set) => ({
   counter: 0,
   max: 5,
   increment: () => set((state) => ({ counter: state.counter + 1 })),
   reset: () => set(() => ({ max: 10 })),
-}));
-
-if (import.meta.env.DEV) {
-  mountStoreDevtool("Counter", useCounter);
-}
+}), { name: "Counter" }));
 
 export default useCounter;
