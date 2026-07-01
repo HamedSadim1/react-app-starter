@@ -2,12 +2,9 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const NavBar = () => {
-  const [dark, setDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") === "dark";
-    }
-    return false;
-  });
+  const [dark, setDark] = useState(() =>
+    document.documentElement.classList.contains("dark"),
+  );
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
